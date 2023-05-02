@@ -1,2 +1,2 @@
 # Online_Quiz_Admob
-This is Online Quiz Admob Application. This is a android based project.
+This is my android based project. Here the participends that can joining for quiz test. This is a online based application.
