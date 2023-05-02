@@ -20,11 +20,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView quizTimer;
     private RelativeLayout option1Layout, option2Layout, option3Layout, option4Layout;
     private TextView option1TV, option2TV, option3TV, option4TV;
-    private ImageView option1Icon, option2Icon,option3Icon, option4Icon;
-    private  TextView totalQuestionTV;
+    private ImageView option1Icon, option2Icon, option3Icon, option4Icon;
+    private TextView totalQuestionTV;
     private TextView currentQuestionTV;
-
-    private DatabaseReference databaseReference = FirebaseDatabase.getInsance().getReferenceFromUrl(https://console.firebase.google.com/u/0/project/quizappadmob-14f3a/database/quizappadmob-14f3a-default-rtdb/data/~2F);
+    private DatabaseReference reference;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -52,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
         totalQuestionTV = findViewById(R.id.totalQuestionTV);
         currentQuestionTV = findViewById(R.id.currentQuestionTV);
+
+        reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://quizappadmob-14f3a-default-rtdb.firebaseio.com/");
 
         final View nextQuestionBtn = findViewById(R.id.nextQuestionBtn);
 
