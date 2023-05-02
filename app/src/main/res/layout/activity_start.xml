@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/primary"
     tools:context=".StartActivity">
-
 
     <ImageView
         android:layout_width="80dp"
@@ -20,21 +19,23 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Online Quize App"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:textSize="20dp"/>
+        android:text="Online Quiz App"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <TextView
-        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play and fun"
         android:layout_marginTop="5dp"
-        android:textSize="17dp"
-        android:textColor="#99FFFFFF"/>
+        android:padding="10dp"
+        android:text="Play and fun"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="#99FFFFFF"
+        android:textSize="17dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startQuizeBtn"
@@ -42,23 +43,23 @@
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@drawable/round_back_secondary_100"
         android:text="Start Quize"
-        android:textColor="#FFFFFF"
         android:textAllCaps="false"
-        android:background="@drawable/round_back_secondary_100"/>
+        android:textColor="#FFFFFF" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/quitBtn"
-        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="60dp"
+        android:background="@drawable/round_back_sec_str_100"
         android:text="Quit Application"
-        android:textColor="#FFFFFF"
+        android:fontFamily="@font/poppins_semibold"
         android:textAllCaps="false"
-        android:background="@drawable/round_back_sec_str_100"/>
-
-
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
