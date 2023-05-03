@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_gravity=""
+        android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:src="@drawable/quize" />
 
@@ -38,7 +38,7 @@
         android:textSize="17dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/startQuizeBtn"
+        android:id="@+id/startQuizBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
@@ -54,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="17dp"
         android:layout_marginEnd="60dp"
         android:background="@drawable/round_back_sec_str_100"
         android:text="Quit Application"

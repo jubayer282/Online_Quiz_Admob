@@ -1,9 +1,11 @@
 package com.jubayer.onlinequizeadmob;
 
+import static com.jubayer.onlinequizeadmob.R.id.startQuizBtn;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
-import android.annotation.SuppressLint;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,10 +17,10 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        final AppCompatButton startQuizeBtn = findViewById(R.id.startQuizeBtn);
+        final AppCompatButton startQuizBtn = findViewById(R.id.startQuizBtn);
         final AppCompatButton quitBtn = findViewById(R.id.quitBtn);
 
-        startQuizeBtn.setOnClickListener(new View.OnClickListener() {
+        startQuizBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

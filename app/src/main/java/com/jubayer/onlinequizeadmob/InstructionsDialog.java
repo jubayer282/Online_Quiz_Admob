@@ -11,9 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 
 public class InstructionsDialog extends Dialog {
-
     private  int instructionPoints = 0;
     public InstructionsDialog(@NonNull Context context) {
+
         super(context);
     }
 
@@ -22,7 +22,6 @@ public class InstructionsDialog extends Dialog {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.instructions_dialog_layout);
 
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         final AppCompatButton continueBtn = findViewById(R.id.continueBtn);
         final TextView instructionsTV = findViewById(R.id.instructionsTV);
 
@@ -42,7 +41,9 @@ public class InstructionsDialog extends Dialog {
         if (instructionPoints == 0){
             instructionsTV.setText(instructionPoint);
         }
-        else instructionsTV.setText(instructionsTV.getText()+"\n\n"+instructionPoint);
+        else{
+            instructionsTV.setText(instructionsTV.getText()+"\n\n"+instructionPoint);
+        }
 
     }
 }
