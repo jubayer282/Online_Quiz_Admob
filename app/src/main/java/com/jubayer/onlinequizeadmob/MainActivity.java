@@ -242,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
     private void startQuizTimer(int maxTimeInSeconds){
-        countDownTimer = new CountDownTimer(maxTimeInSeconds * 1000L, 1000) {
+        countDownTimer = new CountDownTimer(maxTimeInSeconds * 1000, 1000) {
             @Override
             public void onTick(long milliUntilFinished) {
 
