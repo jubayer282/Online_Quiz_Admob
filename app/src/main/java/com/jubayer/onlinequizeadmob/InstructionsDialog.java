@@ -25,14 +25,14 @@ public class InstructionsDialog extends Dialog {
         final AppCompatButton continueBtn = findViewById(R.id.continueBtn);
         final TextView instructionsTV = findViewById(R.id.instructionsTV);
 
-        setInstructionPoint(instructionsTV, "1. You will get maximum 2 minutes to complete the quiz.");
-        setInstructionPoint(instructionsTV, "2. You will 1 point on every correct answer.");
+        setInstructionPoint(instructionsTV, "1. You will get maximum 2 minutes to complete the quiz.\n2. You will 1 point on every correct answer.");
 
 
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-              dismiss();
+            public void onClick(View v) {
+
+                dismiss();
             }
         });
 

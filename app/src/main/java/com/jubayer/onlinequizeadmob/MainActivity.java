@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView option1Icon, option2Icon, option3Icon, option4Icon;
 
     private TextView questionTV;
-    private TextView totalQuestionsTV;
+    private TextView totalQuestionTV;
     private TextView currentQuestion;
     private TextView startQuizBtn;
 
@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
     // selected option number. Value must be between 1-4 (We have 4 option) and 0 means no option selected.
     private int selectedOption = 0;
-
 
 
 
@@ -86,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         option4Icon = findViewById(R.id.option4Icon);
 
         questionTV = findViewById(R.id.questionTV);
-        totalQuestionsTV = findViewById(R.id.totalQuestionsTV);
+        totalQuestionTV = findViewById(R.id.totalQuestionsTV);
         currentQuestion = findViewById(R.id.currentQuestionTV);
 
         final AppCompatButton nextBtn = findViewById(R.id.nextQuestionBtn);
@@ -101,9 +100,14 @@ public class MainActivity extends AppCompatActivity {
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                final int getQuizTime = Integer.parseInt(snapshot.child("time").getValue(String.class));
+
+
+             //  int getQuizTime = Integer.parseInt(snapshot.child("time").getValue(String.class));
+
+               final int getQuizTime = Integer.parseInt(snapshot.child("time").getValue(String.class));
 
                 for(DataSnapshot questions : snapshot.child("questions").getChildren()){
+
                     String getQuestion = questions.child("question").getValue(String.class);
                     String getOption1 = questions.child("option1").getValue(String.class);
                     String getOption2 = questions.child("option2").getValue(String.class);
@@ -123,9 +127,9 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 //setting total questions to textView
-                totalQuestionsTV.setText("/"+questionsLists.size());
+                totalQuestionTV.setText("/"+questionsLists.size());
 
-                // start quiz timer and pass mas time in seconds
+                // start quiz timer and pass max time in seconds
                 startQuizTimer(getQuizTime);
 
                 // select first question by default
@@ -238,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
     private void startQuizTimer(int maxTimeInSeconds){
-        countDownTimer = new CountDownTimer(maxTimeInSeconds * 1000, 1000) {
+        countDownTimer = new CountDownTimer(maxTimeInSeconds * 1000L, 1000) {
             @Override
             public void onTick(long milliUntilFinished) {
 

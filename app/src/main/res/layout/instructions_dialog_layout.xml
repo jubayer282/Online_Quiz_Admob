@@ -26,6 +26,7 @@
                 android:fontFamily="@font/poppins_semibold"/>
 
             <TextView
+                android:padding="40dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
