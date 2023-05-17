@@ -62,4 +62,19 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF" />
 
+
+    <TextView
+        android:id="@+id/user_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hellow World"/>
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:id="@+id/lag_out"
+        android:text="@string/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>

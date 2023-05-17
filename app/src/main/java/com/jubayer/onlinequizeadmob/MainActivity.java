@@ -11,6 +11,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         quizTimer = findViewById(R.id.quizTimer);
         startQuizBtn = findViewById(R.id.startQuizBtn);
 
@@ -87,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
         questionTV = findViewById(R.id.questionTV);
         totalQuestionTV = findViewById(R.id.totalQuestionsTV);
         currentQuestion = findViewById(R.id.currentQuestionTV);
+
+
 
         final AppCompatButton nextBtn = findViewById(R.id.nextQuestionBtn);
 
